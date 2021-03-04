@@ -15,7 +15,6 @@ run.bat
 *.error
 .buildPatch
 rebel.xml
-YOU DO NOT HAVE A VALID JREBEL LICENSE.error
 *.txt
 .recommenders/
 *DS_Store
