@@ -11,15 +11,27 @@ import vo.Sudoku;
 public class SudokuSolveServiceTest {
     public static void main(String args[]) {
         int[][] array = {
-                {0, 8, 0, 6, 0, 0, 0, 9, 0},
-                {0, 9, 0, 0, 0, 0, 7, 0, 5},
-                {0, 0, 0, 3, 1, 0, 0, 6, 0},
-                {0, 0, 0, 0, 7, 2, 0, 0, 4},
-                {8, 0, 0, 5, 0, 0, 0, 2, 0},
-                {0, 1, 2, 0, 6, 0, 8, 0, 0},
-                {0, 4, 0, 0, 3, 0, 0, 0, 9},
-                {0, 6, 0, 9, 0, 4, 0, 7, 0},
-                {1, 5, 0, 0, 0, 0, 0, 0, 3}};
+                {0, 4, 6, 9, 0, 3, 0, 0, 0},
+                {0, 0, 3, 0, 5, 0, 0, 6, 0},
+                {9, 0, 0, 0, 0, 2, 0, 0, 3},
+                {0, 0, 5, 0, 0, 6, 0, 0, 0},
+                {8, 0, 0, 0, 0, 0, 0, 1, 0},
+                {0, 1, 0, 7, 8, 0, 2, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 5, 0},
+                {0, 8, 1, 3, 0, 0, 0, 0, 7},
+                {0, 0, 0, 8, 0, 0, 1, 0, 4}};
+
+        /**
+         {0, 8, 0, 6, 0, 0, 0, 9, 0},
+         {0, 9, 0, 0, 0, 0, 7, 0, 5},
+         {0, 0, 0, 3, 1, 0, 0, 6, 0},
+         {0, 0, 0, 0, 7, 2, 0, 0, 4},
+         {8, 0, 0, 5, 0, 0, 0, 2, 0},
+         {0, 1, 2, 0, 6, 0, 8, 0, 0},
+         {0, 4, 0, 0, 3, 0, 0, 0, 9},
+         {0, 6, 0, 9, 0, 4, 0, 7, 0},
+         {1, 5, 0, 0, 0, 0, 0, 0, 3}};
+         */
         /**
          {3, 9, 8, 2, 1, 6, 4, 7, 5},
          {4, 6, 7, 5, 9, 3, 8, 1, 2},
@@ -33,7 +45,9 @@ public class SudokuSolveServiceTest {
          */
         Sudoku sudoku = new Sudoku(array);
         SudokuSolveService sudokuSolveService = new SudokuSolveServiceImpl();
+        long startTime = System.currentTimeMillis();
         sudokuSolveService.solve(sudoku);
+        System.out.println(String.format("solve proble cost time: %d ms",  System.currentTimeMillis() - startTime));
         for (int i = 0 ; i < 9; i ++) {
             for (int j = 0; j < 9 ; j ++) {
                 System.out.print(sudoku.getCellValue(i, j) + (j == 8 ? "\n" : " "));
