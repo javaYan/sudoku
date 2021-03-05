@@ -52,6 +52,9 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
             if (value < MAX_VALUE) {
                 value ++;
                 continue;
+            } else {
+                // 最大值也不可接受，那就初始化当前单元
+                sudoku.setCellValue(row, column, INIT_VALUE);
             }
 
             // 值不可接受且值已经是最大值，则对上一个单元进行回退
