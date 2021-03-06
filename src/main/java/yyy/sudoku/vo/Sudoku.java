@@ -1,4 +1,4 @@
-package vo;
+package yyy.sudoku.vo;
 
 
 /**
@@ -20,8 +20,8 @@ public class Sudoku {
     private int minUnfixedColumn = -1;
 
     public Sudoku(int[][] array) {
-        for (int row = 0; row < 9; row ++) {
-            for (int column = 0; column < 9; column ++) {
+        for (int row = 0; row < 9; row++) {
+            for (int column = 0; column < 9; column++) {
                 if (array[row][column] > 0) {
                     matrix[row][column] = new Cell(array[row][column], true);
                     if (minUnfixedRow == -1) {
@@ -65,6 +65,7 @@ public class Sudoku {
 
     /**
      * 是否是不可更改的元素
+     *
      * @return
      */
     public boolean isFixedCell(int row, int column) {

@@ -15,7 +15,6 @@ run.bat
 *.error
 .buildPatch
 rebel.xml
-*.txt
 .recommenders/
 *DS_Store
 .DS_Store

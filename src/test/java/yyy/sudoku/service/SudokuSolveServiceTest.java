@@ -1,7 +1,7 @@
-package service;
+package yyy.sudoku.service;
 
-import service.impl.SudokuSolveServiceImpl;
-import vo.Sudoku;
+import yyy.sudoku.service.impl.SudokuSolveServiceImpl;
+import yyy.sudoku.vo.Sudoku;
 
 /**
  * @author yanyuyu
@@ -47,9 +47,9 @@ public class SudokuSolveServiceTest {
         SudokuSolveService sudokuSolveService = new SudokuSolveServiceImpl();
         long startTime = System.currentTimeMillis();
         sudokuSolveService.solve(sudoku);
-        System.out.println(String.format("solve proble cost time: %d ms",  System.currentTimeMillis() - startTime));
-        for (int i = 0 ; i < 9; i ++) {
-            for (int j = 0; j < 9 ; j ++) {
+        System.out.println(String.format("solve proble cost time: %d ms", System.currentTimeMillis() - startTime));
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
                 System.out.print(sudoku.getCellValue(i, j) + (j == 8 ? "\n" : " "));
             }
         }

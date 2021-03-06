@@ -1,7 +1,7 @@
-package service.impl;
+package yyy.sudoku.service.impl;
 
-import service.SudokuSolveService;
-import vo.Sudoku;
+import yyy.sudoku.service.SudokuSolveService;
+import yyy.sudoku.vo.Sudoku;
 
 /**
  * @author yanyuyu
@@ -34,7 +34,7 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
             // 如果是固定单元，则跳过
             if (sudoku.isFixedCell(row, column)) {
                 row = column == MAX_INDEX ? ++row : row;
-                column = column == MAX_INDEX ? MIN_INDEX :  ++column;
+                column = column == MAX_INDEX ? MIN_INDEX : ++column;
                 value = MIN_VALUE;
                 continue;
             }
@@ -50,7 +50,7 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
 
             // 值不可接受，则对值进行+1
             if (value < MAX_VALUE) {
-                value ++;
+                value++;
                 continue;
             } else {
                 // 最大值也不可接受，那就初始化当前单元
@@ -83,6 +83,7 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
 
     /**
      * 计算前校验
+     *
      * @param sudoku
      */
     private void beforeSolve(Sudoku sudoku) {
@@ -94,6 +95,7 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
 
     /**
      * 校验是否可接收此值
+     *
      * @param sudoku
      * @param row
      * @param column
@@ -102,7 +104,7 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
      */
     private boolean acceptValue(Sudoku sudoku, int row, int column, int value) {
         // 校验同行同列
-        for (int i = MIN_INDEX; i <= MAX_INDEX; i ++) {
+        for (int i = MIN_INDEX; i <= MAX_INDEX; i++) {
             // 校验同行是否有相同数
             if (column != i && sudoku.getCellValue(row, i) == value) {
                 return false;

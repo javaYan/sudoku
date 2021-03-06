@@ -1,6 +1,6 @@
-package service;
+package yyy.sudoku.service;
 
-import vo.Sudoku;
+import yyy.sudoku.vo.Sudoku;
 
 /**
  * @author yanyuyu
