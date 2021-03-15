@@ -1,6 +1,9 @@
 package yyy.sudoku.vo;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * @author yanyuyu
  * @Description
@@ -76,7 +79,9 @@ public class Sudoku {
         return matrix;
     }
 
-    class Cell {
+    @Getter
+    @Setter
+    public class Cell {
         private int value;
         /**
          * 是否是固定值

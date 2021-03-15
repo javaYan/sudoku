@@ -1,13 +1,19 @@
 package yyy.sudoku.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 import yyy.sudoku.service.SudokuSolveService;
 import yyy.sudoku.vo.Sudoku;
+
+import java.util.Arrays;
 
 /**
  * @author yanyuyu
  * @Description 数据解题： 回溯法
  * @Date 创建于 2021/3/4 11:05 下午
  */
+@Slf4j
+@Service
 public class SudokuSolveServiceImpl implements SudokuSolveService {
     // 最大边界
     private static int MAX_INDEX = 8;
@@ -79,10 +85,12 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
                 break;
             }
         }
+
+        afterSolve(sudoku);
     }
 
     /**
-     * 计算前校验
+     * 计算前
      *
      * @param sudoku
      */
@@ -91,6 +99,12 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
         if (sudoku.getMinUnfixedColumn() == -1 || sudoku.getMinUnfixedRow() == -1) {
             throw new RuntimeException("No Need To Solve For This Problem !");
         }
+        log.info("\nSudoku solve before :\n{}", getSudokuMatrixString(sudoku));
+    }
+
+    // 计算后
+    private void afterSolve(Sudoku sudoku) {
+        log.info("\nSudoku solve after :\n{}", getSudokuMatrixString(sudoku));
     }
 
     /**
@@ -126,5 +140,18 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
             }
         }
         return true;
+    }
+
+    private String getSudokuMatrixString(Sudoku sudoku) {
+        Sudoku.Cell[][] cells = sudoku.getMatrix();
+        StringBuilder stringBuilder = new StringBuilder();
+        Arrays.stream(cells).forEach( cell -> {
+            stringBuilder.append("[");
+            Arrays.stream(cell).forEach( c -> {
+                stringBuilder.append(c.getValue()).append(",");
+            });
+            stringBuilder.deleteCharAt(stringBuilder.length()-1).append("]\n");
+        });
+        return stringBuilder.toString();
     }
 }
