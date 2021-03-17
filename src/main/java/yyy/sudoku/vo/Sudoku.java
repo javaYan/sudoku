@@ -45,10 +45,13 @@ public class Sudoku {
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
                 if (MathUtil.isGreateThanZero(cells[row][column].getValue())) {
+                    cells[row][column].setFixed(true);
                     if (minUnfixedRow == -1) {
                         minUnfixedRow = row;
                         minUnfixedColumn = column;
                     }
+                } else {
+                    cells[row][column].setFixed(false);
                 }
             }
         }

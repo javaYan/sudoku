@@ -85,8 +85,10 @@ public class SudokuController extends BaseController{
             Sudoku sudoku = new Sudoku(request.getMatrix());
             sudokuSolveService.solve(sudoku);
             return success(sudoku.getMatrix());
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             return failure(e.getMessage());
+        } catch (Exception e) {
+            return failure("No Answer For This Problem !");
         }
     }
 }

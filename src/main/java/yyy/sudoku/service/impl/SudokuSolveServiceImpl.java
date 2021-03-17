@@ -3,6 +3,7 @@ package yyy.sudoku.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import yyy.sudoku.service.SudokuSolveService;
+import yyy.sudoku.util.MathUtil;
 import yyy.sudoku.vo.Cell;
 import yyy.sudoku.vo.Sudoku;
 
@@ -68,14 +69,14 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
             while (true) {
                 // 如果回退至行索引异常，则说明此题无解
                 if (row < MIN_INDEX) {
-                    throw new RuntimeException("No Answer For This Problem !");
+                    throw new IllegalArgumentException("No Answer For This Problem !");
                 }
                 row = column == MIN_INDEX ? --row : row;
                 column = column == MIN_INDEX ? MAX_INDEX : --column;
                 if (sudoku.isFixedCell(row, column)) {
                     continue;
                 }
-                int preValue = sudoku.getCellValue(row, column);
+                Integer preValue = sudoku.getCellValue(row, column);
                 // 如果上一个单元的值是最大值 清空上一单元值，继续回退
                 if (preValue == MAX_VALUE) {
                     sudoku.setCellValue(row, column, INIT_VALUE);
@@ -83,6 +84,7 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
                 }
                 // 如果非最大值，则进行+1 前进
                 value = preValue + 1;
+
                 break;
             }
         }
@@ -98,7 +100,15 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
     private void beforeSolve(Sudoku sudoku) {
         // 如果没有需要填写的单元，则认为题目异常
         if (sudoku.getMinUnfixedColumn() == -1 || sudoku.getMinUnfixedRow() == -1) {
-            throw new RuntimeException("No Need To Solve For This Problem !");
+            throw new IllegalArgumentException("No Need To Solve For This Problem !");
+        }
+        // 如果题目无解或冲突，则认为异常
+        for (int row = MIN_INDEX; row <= MAX_INDEX; row ++) {
+            for (int column = MIN_INDEX; column <= MAX_INDEX; column ++) {
+                if (sudoku.isFixedCell(row, column) && (!MathUtil.isRange(sudoku.getCellValue(row, column), MIN_VALUE, MAX_VALUE) || !acceptValue(sudoku, row, column, sudoku.getCellValue(row, column)))) {
+                    throw new IllegalArgumentException("No Answer For This Problem !");
+                }
+            }
         }
         log.info("\nSudoku solve before :\n{}", getSudokuMatrixString(sudoku));
     }

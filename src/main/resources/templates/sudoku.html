@@ -9,15 +9,16 @@
     <template :span="9" v-if="matrix.length == 9">
         <el-row v-for="(row, rowIndex) in 9" :key="row">
             <el-col :span="1" v-for="(col, colIndex) in 9" :key="col">
-                <el-input type="text" min="0" max="9" v-model="matrix[rowIndex][colIndex].value"></el-input>
+                <el-input v-show="matrix[rowIndex][colIndex].fixed" type="text" min="0" max="9" v-model="matrix[rowIndex][colIndex].value" :disabled="true" suffix-icon="el-icon-price-tag"></el-input>
+                <el-input v-show="!matrix[rowIndex][colIndex].fixed" type="text" min="0" max="9" v-model="matrix[rowIndex][colIndex].value"></el-input>
             </el-col>
         </el-row>
         <br/>
         <el-row>
-            <el-button @click="doSolve()" :loading="btnLoading">求解</el-button>
+            <el-button @click="doSolve()" :loading="btnLoading" type="primary" round>求解</el-button>
+            <el-button @click="initSolve" type="info" round>清空</el-button>
         </el-row>
     </template>
-
 </div>
 </body>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
