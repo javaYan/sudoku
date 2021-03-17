@@ -3,6 +3,7 @@ package yyy.sudoku.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import yyy.sudoku.service.SudokuSolveService;
+import yyy.sudoku.vo.Cell;
 import yyy.sudoku.vo.Sudoku;
 
 import java.util.Arrays;
@@ -34,7 +35,7 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
 
         int row = MIN_INDEX;
         int column = MIN_INDEX;
-        int value = MIN_VALUE;
+        Integer value = MIN_VALUE;
         // 行越界 说明数独问题解决
         while (row <= MAX_INDEX) {
             // 如果是固定单元，则跳过
@@ -116,7 +117,7 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
      * @param value
      * @return
      */
-    private boolean acceptValue(Sudoku sudoku, int row, int column, int value) {
+    private boolean acceptValue(Sudoku sudoku, int row, int column, Integer value) {
         // 校验同行同列
         for (int i = MIN_INDEX; i <= MAX_INDEX; i++) {
             // 校验同行是否有相同数
@@ -143,12 +144,12 @@ public class SudokuSolveServiceImpl implements SudokuSolveService {
     }
 
     private String getSudokuMatrixString(Sudoku sudoku) {
-        Sudoku.Cell[][] cells = sudoku.getMatrix();
+        Cell[][] cells = sudoku.getMatrix();
         StringBuilder stringBuilder = new StringBuilder();
         Arrays.stream(cells).forEach( cell -> {
             stringBuilder.append("[");
             Arrays.stream(cell).forEach( c -> {
-                stringBuilder.append(c.getValue()).append(",");
+                stringBuilder.append(c.getValue() == null ? " " : c.getValue()).append(",");
             });
             stringBuilder.deleteCharAt(stringBuilder.length()-1).append("]\n");
         });

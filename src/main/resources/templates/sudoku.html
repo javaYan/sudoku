@@ -1,13 +1,67 @@
-<!--注意：引入thymeleaf的名称空间-->
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 <body>
-    <p th:text="'hello SpringBoot'">hello thymeleaf</p>
+<div id="app">
+    <template :span="9" v-if="matrix.length == 9">
+        <el-row v-for="(row, rowIndex) in 9" :key="row">
+            <el-col :span="1" v-for="(col, colIndex) in 9" :key="col">
+                <el-input type="text" min="0" max="9" v-model="matrix[rowIndex][colIndex].value"></el-input>
+            </el-col>
+        </el-row>
+        <br/>
+        <el-row>
+            <el-button @click="doSolve()" :loading="btnLoading">求解</el-button>
+        </el-row>
+    </template>
+
+</div>
 </body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script th:inline="none">
+    new Vue({
+        el: '#app',
+        data: {
+            matrix: [],
+            btnLoading: false,
+        },
+        created:function() {
+            this.initSolve();
+        },
+        methods: {
+            initSolve: function() {
+                var self = this;
+                axios.get('http://127.0.0.1:8080/sudoku/initSolve')
+                    .then(function (response) {
+                        self.matrix = response.data.data;
+                    })
+                    .catch(function (error) {
+                        self.$message.error('数读初始化异常。。。');
+                    });
+            },
+            doSolve: function() {
+                var self = this;
+                self.btnLoading = true;
+                axios.post('http://127.0.0.1:8080/sudoku/doSolve', {'matrix': self.matrix})
+                    .then(function (response) {
+                        self.btnLoading = false;
+                        if (response.data.success == true) {
+                            self.matrix = response.data.data;
+                        } else {
+                            self.$message.error(response.data.msg);
+                        }
+                    })
+                    .catch(function (error) {
+                        self.btnLoading = false;
+                        self.$message.error('数独解题异常。。。');
+                    });
+            }
+        }
+    })
+</script>
 </html>

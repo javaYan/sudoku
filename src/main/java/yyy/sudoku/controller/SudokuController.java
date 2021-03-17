@@ -69,7 +69,7 @@ public class SudokuController extends BaseController{
     @ResponseBody
     @GetMapping("initSolve")
     public Response initSolve() {
-        int[][] matrix = new int[9][9];
+        Integer[][] matrix = new Integer[9][9];
         Sudoku sudoku = new Sudoku(matrix);
         return success(sudoku.getMatrix());
     }
@@ -81,8 +81,12 @@ public class SudokuController extends BaseController{
     @ResponseBody
     @PostMapping("doSolve")
     public Response doSolve(@RequestBody SudokuSolveRequest request) {
-        Sudoku sudoku = new Sudoku(request.getMatrix());
-        sudokuSolveService.solve(sudoku);
-        return success(sudoku.getMatrix());
+        try {
+            Sudoku sudoku = new Sudoku(request.getMatrix());
+            sudokuSolveService.solve(sudoku);
+            return success(sudoku.getMatrix());
+        } catch (Exception e) {
+            return failure(e.getMessage());
+        }
     }
 }

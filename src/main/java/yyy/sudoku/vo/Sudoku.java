@@ -3,12 +3,15 @@ package yyy.sudoku.vo;
 
 import lombok.Getter;
 import lombok.Setter;
+import yyy.sudoku.util.MathUtil;
 
 /**
  * @author yanyuyu
  * @Description
  * @Date 创建于 2021/3/4 11:09 下午
  */
+@Getter
+@Setter
 public class Sudoku {
     private Cell[][] matrix = new Cell[9][9];
 
@@ -22,48 +25,50 @@ public class Sudoku {
      */
     private int minUnfixedColumn = -1;
 
-    public Sudoku(int[][] array) {
+    public Sudoku(Integer[][] array) {
         for (int row = 0; row < 9; row++) {
             for (int column = 0; column < 9; column++) {
-                if (array[row][column] > 0) {
+                if (MathUtil.isGreateThanZero(array[row][column])) {
                     matrix[row][column] = new Cell(array[row][column], true);
                     if (minUnfixedRow == -1) {
                         minUnfixedRow = row;
                         minUnfixedColumn = column;
                     }
                 } else {
-                    matrix[row][column] = new Cell(array[row][column], false);
+                    matrix[row][column] = new Cell(false);
                 }
             }
         }
     }
 
-    public int getCellValue(int row, int column) {
-        return matrix[row][column].value;
+    public Sudoku(Cell[][] cells) {
+        for (int row = 0; row < 9; row++) {
+            for (int column = 0; column < 9; column++) {
+                if (MathUtil.isGreateThanZero(cells[row][column].getValue())) {
+                    if (minUnfixedRow == -1) {
+                        minUnfixedRow = row;
+                        minUnfixedColumn = column;
+                    }
+                }
+            }
+        }
+        matrix = cells;
     }
 
-    public void setCellValue(int row, int column, int value) {
+    public Integer getCellValue(int row, int column) {
+        return matrix[row][column].getValue();
+    }
+
+    public void setCellValue(int row, int column, Integer value) {
         matrix[row][column] = new Cell(value, false);
-    }
-
-    public void setCellValue(int row, int column, int value, boolean fixed) {
-        matrix[row][column] = new Cell(value, fixed);
     }
 
     public int getMinUnfixedRow() {
         return minUnfixedRow;
     }
 
-    public void setMinUnfixedRow(int minUnfixedRow) {
-        this.minUnfixedRow = minUnfixedRow;
-    }
-
     public int getMinUnfixedColumn() {
         return minUnfixedColumn;
-    }
-
-    public void setMinUnfixedColumn(int minUnfixedColumn) {
-        this.minUnfixedColumn = minUnfixedColumn;
     }
 
     /**
@@ -72,25 +77,12 @@ public class Sudoku {
      * @return
      */
     public boolean isFixedCell(int row, int column) {
-        return matrix[row][column].fixed;
+        return Boolean.TRUE.equals(matrix[row][column].getFixed());
     }
 
     public Cell[][] getMatrix() {
         return matrix;
     }
 
-    @Getter
-    @Setter
-    public class Cell {
-        private int value;
-        /**
-         * 是否是固定值
-         */
-        private boolean fixed;
 
-        public Cell(int value, boolean fixed) {
-            this.value = value;
-            this.fixed = fixed;
-        }
-    }
 }

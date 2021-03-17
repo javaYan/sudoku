@@ -11,5 +11,5 @@ import lombok.Setter;
 @Getter
 @Setter
 public class SudokuSolveRequest {
-    private int[][] matrix;
+    private Cell[][] matrix;
 }
