@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36b8413c-fc7a-4dc4-9a53-a7fd941cad71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/fonts/element-icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/fonts/element-icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/element-ui-v2.4.11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/locale-zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/vue-v2.5.2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yyy/sudoku/controller/SudokuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yyy/sudoku/controller/SudokuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sudoku.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sudoku.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pONNoNPTYar9n7E4bSzQIJdkCm" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/yyy/sudoku" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/css" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/element-ui" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/pages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SudokuApplication">
+    <configuration name="SudokuController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="yyy.sudoku.controller.SudokuController" />
+      <module name="sudoku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yyy.sudoku.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuSolveServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="yyy.sudoku.service.SudokuSolveServiceTest" />
+      <module name="sudoku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yyy.sudoku.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sudoku" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="yyy.sudoku.SudokuApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SudokuSolveServiceTest" />
+        <item itemvalue="Application.SudokuController" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36b8413c-fc7a-4dc4-9a53-a7fd941cad71" name="Default Changelist" comment="" />
+      <created>1615050138065</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615050138065</updated>
+      <workItem from="1615050139729" duration="245000" />
+      <workItem from="1615176577532" duration="1879000" />
+      <workItem from="1615212203498" duration="4159000" />
+      <workItem from="1615811859212" duration="4870000" />
+      <workItem from="1615868317420" duration="1986000" />
+      <workItem from="1615907806394" duration="5696000" />
+      <workItem from="1615982862270" duration="121000" />
+      <workItem from="1615991240152" duration="6397000" />
+      <workItem from="1615997890562" duration="1600000" />
+      <workItem from="1615999506881" duration="6906000" />
+      <workItem from="1616041039994" duration="3511000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: update sudoku service">
+      <created>1615050285612</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615050285613</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: update sudoku service">
+      <created>1615817753504</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615817753504</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: update sudoku service">
+      <created>1615991421833</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615991421833</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: finish sudoku solve">
+      <created>1616003339473</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616003339473</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: finish sudoku solve">
+      <created>1616006733598</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616006733598</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: update sudoku service" />
+    <MESSAGE value="feat: finish sudoku solve" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: finish sudoku solve" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615820460676">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="304" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1615820460676" />
+    <state x="577" y="310" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1615820405767">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="577" y="310" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1615820405767" />
+    <state x="577" y="318" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1615820402663">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="577" y="318" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1615820402663" />
+    <state x="713" y="238" key="#xdebugger.evaluate" timestamp="1616006434504">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="713" y="238" key="#xdebugger.evaluate/0.0.1680.1050@0.0.1680.1050" timestamp="1616006434504" />
+    <state x="167" y="125" key="CommitChangelistDialog2" timestamp="1616006733445">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="167" y="125" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1616006733445" />
+    <state x="167" y="136" key="CommitChangelistDialog2/0.23.1680.953@0.23.1680.953" timestamp="1615991421579" />
+    <state width="437" height="466" key="DebuggerActiveHint" timestamp="1616004539505">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="437" height="466" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1616004539505" />
+    <state x="168" y="94" width="1344" height="840" key="DiffContextDialog" timestamp="1616042939583">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="168" y="94" width="1344" height="840" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1616042939583" />
+    <state x="168" y="108" width="1344" height="762" key="DiffContextDialog/0.23.1680.953@0.23.1680.953" timestamp="1615913113261" />
+    <state width="1638" height="324" key="GridCell.Tab.0.bottom" timestamp="1616044576506">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576506" />
+    <state width="1638" height="363" key="GridCell.Tab.0.bottom/0.23.1680.927@0.23.1680.927" timestamp="1615215115057" />
+    <state width="1638" height="324" key="GridCell.Tab.0.bottom/0.23.1680.953@0.23.1680.953" timestamp="1616006154757" />
+    <state width="1638" height="324" key="GridCell.Tab.0.center" timestamp="1616044576504">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576504" />
+    <state width="1638" height="363" key="GridCell.Tab.0.center/0.23.1680.927@0.23.1680.927" timestamp="1615215115055" />
+    <state width="1638" height="324" key="GridCell.Tab.0.center/0.23.1680.953@0.23.1680.953" timestamp="1616006154756" />
+    <state width="1638" height="324" key="GridCell.Tab.0.left" timestamp="1616044576503">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576503" />
+    <state width="1638" height="363" key="GridCell.Tab.0.left/0.23.1680.927@0.23.1680.927" timestamp="1615215115055" />
+    <state width="1638" height="324" key="GridCell.Tab.0.left/0.23.1680.953@0.23.1680.953" timestamp="1616006154756" />
+    <state width="1638" height="324" key="GridCell.Tab.0.right" timestamp="1616044576505">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576505" />
+    <state width="1638" height="363" key="GridCell.Tab.0.right/0.23.1680.927@0.23.1680.927" timestamp="1615215115056" />
+    <state width="1638" height="324" key="GridCell.Tab.0.right/0.23.1680.953@0.23.1680.953" timestamp="1616006154757" />
+    <state width="1638" height="324" key="GridCell.Tab.1.bottom" timestamp="1616044576409">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576409" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.23.1680.927@0.23.1680.927" timestamp="1615215363441" />
+    <state width="1638" height="324" key="GridCell.Tab.1.bottom/0.23.1680.953@0.23.1680.953" timestamp="1616044306300" />
+    <state width="1638" height="324" key="GridCell.Tab.1.center" timestamp="1616044576408">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576408" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.23.1680.927@0.23.1680.927" timestamp="1615215363439" />
+    <state width="1638" height="324" key="GridCell.Tab.1.center/0.23.1680.953@0.23.1680.953" timestamp="1616044306297" />
+    <state width="1638" height="324" key="GridCell.Tab.1.left" timestamp="1616044576407">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576407" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.23.1680.927@0.23.1680.927" timestamp="1615215363439" />
+    <state width="1638" height="324" key="GridCell.Tab.1.left/0.23.1680.953@0.23.1680.953" timestamp="1616044306296" />
+    <state width="1638" height="324" key="GridCell.Tab.1.right" timestamp="1616044576408">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576408" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.23.1680.927@0.23.1680.927" timestamp="1615215363440" />
+    <state width="1638" height="324" key="GridCell.Tab.1.right/0.23.1680.953@0.23.1680.953" timestamp="1616044306298" />
+    <state width="1638" height="324" key="GridCell.Tab.2.bottom" timestamp="1616044576412">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576412" />
+    <state width="1638" height="363" key="GridCell.Tab.2.bottom/0.23.1680.927@0.23.1680.927" timestamp="1615215114983" />
+    <state width="1638" height="324" key="GridCell.Tab.2.bottom/0.23.1680.953@0.23.1680.953" timestamp="1616006154762" />
+    <state width="1638" height="324" key="GridCell.Tab.2.center" timestamp="1616044576410">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576410" />
+    <state width="1638" height="363" key="GridCell.Tab.2.center/0.23.1680.927@0.23.1680.927" timestamp="1615215114982" />
+    <state width="1638" height="324" key="GridCell.Tab.2.center/0.23.1680.953@0.23.1680.953" timestamp="1616006154761" />
+    <state width="1638" height="324" key="GridCell.Tab.2.left" timestamp="1616044576409">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576409" />
+    <state width="1638" height="363" key="GridCell.Tab.2.left/0.23.1680.927@0.23.1680.927" timestamp="1615215114982" />
+    <state width="1638" height="324" key="GridCell.Tab.2.left/0.23.1680.953@0.23.1680.953" timestamp="1616006154760" />
+    <state width="1638" height="324" key="GridCell.Tab.2.right" timestamp="1616044576411">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="324" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1616044576411" />
+    <state width="1638" height="363" key="GridCell.Tab.2.right/0.23.1680.927@0.23.1680.927" timestamp="1615215114983" />
+    <state width="1638" height="324" key="GridCell.Tab.2.right/0.23.1680.953@0.23.1680.953" timestamp="1616006154761" />
+    <state x="646" y="242" key="RollbackChangesDialog" timestamp="1615999859379">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="646" y="242" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1615999859379" />
+    <state x="349" y="142" key="SettingsEditor" timestamp="1615991793133">
+      <screen x="0" y="23" width="1680" height="953" />
+    </state>
+    <state x="349" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1615176643635" />
+    <state x="349" y="142" key="SettingsEditor/0.23.1680.953@0.23.1680.953" timestamp="1615991793133" />
+    <state x="657" y="212" key="VCS.ChangeListViewerDialog" timestamp="1615996843441">
+      <screen x="0" y="23" width="1680" height="953" />
+    </state>
+    <state x="657" y="212" key="VCS.ChangeListViewerDialog/0.23.1680.953@0.23.1680.953" timestamp="1615996843441" />
+    <state x="440" y="253" key="Vcs.Push.Dialog.v2" timestamp="1616006742261">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="253" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1616006742261" />
+    <state x="440" y="253" key="Vcs.Push.Dialog.v2/0.23.1680.953@0.23.1680.953" timestamp="1615991819573" />
+    <state x="635" y="311" key="chooseDestDirectoryDialog" timestamp="1616000010783">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="635" y="311" key="chooseDestDirectoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1616000010783" />
+    <state x="100" y="110" width="1480" height="830" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615997770047">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="100" y="110" width="1480" height="830" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1615997770047" />
+    <state x="100" y="123" width="1480" height="753" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.953@0.23.1680.953" timestamp="1615996182412" />
+    <state x="503" y="294" width="705" height="462" key="find.popup" timestamp="1616006702912">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="503" y="294" width="705" height="462" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1616006702912" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1616043829666">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1616043829666" />
+  </component>
+</project>

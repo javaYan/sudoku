@@ -60,20 +60,6 @@ public class SudokuController extends BaseController{
         return null;
     }
 
-
-
-    /**
-     * 初始化 返回空数独
-     * @return
-     */
-    @ResponseBody
-    @GetMapping("initSolve")
-    public Response initSolve() {
-        Integer[][] matrix = new Integer[9][9];
-        Sudoku sudoku = new Sudoku(matrix);
-        return success(sudoku.getMatrix());
-    }
-
     /**
      * 进行解题
      * @return

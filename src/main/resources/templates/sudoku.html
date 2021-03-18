@@ -2,48 +2,44 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" th:href="@{css/element-ui-v2.4.11.css}">
 </head>
 <body>
 <div id="app">
-    <template :span="9" v-if="matrix.length == 9">
-        <el-row v-for="(row, rowIndex) in 9" :key="row">
-            <el-col :span="1" v-for="(col, colIndex) in 9" :key="col">
-                <el-input v-show="matrix[rowIndex][colIndex].fixed" type="text" min="0" max="9" v-model="matrix[rowIndex][colIndex].value" :disabled="true" suffix-icon="el-icon-price-tag"></el-input>
-                <el-input v-show="!matrix[rowIndex][colIndex].fixed" type="text" min="0" max="9" v-model="matrix[rowIndex][colIndex].value"></el-input>
-            </el-col>
-        </el-row>
-        <br/>
-        <el-row>
-            <el-button @click="doSolve()" :loading="btnLoading" type="primary" round>求解</el-button>
-            <el-button @click="initSolve" type="info" round>清空</el-button>
-        </el-row>
-    </template>
+    <br/><br/><br/><hr>
+    <el-row v-for="(row, rowIndex) in 9" :key="row">
+        <el-col :span="7">&nbsp;</el-col>
+        <el-col :span="1" v-for="(col, colIndex) in 9" :key="col">
+            <el-input v-show="matrix[rowIndex][colIndex].fixed" type="text" min="0" max="9" v-model="matrix[rowIndex][colIndex].value" :disabled="true"></el-input>
+            <el-input v-show="!matrix[rowIndex][colIndex].fixed" type="text" min="0" max="9" v-model="matrix[rowIndex][colIndex].value"></el-input>
+        </el-col>
+        <el-col :span="8">&nbsp;</el-col>
+    </el-row>
+    <br/>
+    <el-row>
+        <el-col :span="8">&nbsp;</el-col>
+        <el-col :span="6"><el-button @click="doSolve()" :loading="btnLoading" type="primary" round>求解</el-button></el-col>
+        <el-col :span="10"><el-button @click="initSolve" type="info" round>清空</el-button></el-col>
+    </el-row>
+    <hr>
 </div>
 </body>
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script th:src="@{/js/vue-v2.5.2.js}"></script>
+<script th:src="@{js/element-ui-v2.4.11.js}"></script>
+<script th:src="@{js/locale-zh-CN.js}"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script th:inline="none">
     new Vue({
         el: '#app',
         data: {
-            matrix: [],
+            matrix: [[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}]],
             btnLoading: false,
         },
         created:function() {
-            this.initSolve();
         },
         methods: {
             initSolve: function() {
-                var self = this;
-                axios.get('http://127.0.0.1:8080/sudoku/initSolve')
-                    .then(function (response) {
-                        self.matrix = response.data.data;
-                    })
-                    .catch(function (error) {
-                        self.$message.error('数读初始化异常。。。');
-                    });
+                this.matrix = [[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}],[{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false},{"value":null,"fixed":false}]];
             },
             doSolve: function() {
                 var self = this;
