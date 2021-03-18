@@ -1,6 +1,7 @@
 n/
 *.iml
 .idea
+.idea/
 target/
 out/
 .settings/
